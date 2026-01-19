@@ -1,0 +1,272 @@
+/* ================= ABOUT SECTION ================= */
+
+#about.content.active {
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;   /* LEFT / RIGHT like original */
+    gap: 4rem;
+    align-items: start;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;   /* IMPORTANT */
+}
+
+.sidebar h3{
+    font-size: 2rem;
+    text-align: left;
+}
+
+.sidebar p{
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    text-align: justify;          /* justify */
+    text-justify: inter-word;     /* better spacing */
+    hyphens: auto;                /* 🔥 VERY IMPORTANT */
+    line-height: 1.2;             /* readability */
+
+    max-width: 520px;             /* 🔥 limits ugly stretching */
+}
+
+
+/* ================= TABS ================= */
+
+.sidebar .tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar .tabs span{
+    width: 100%;
+    border: 2px solid transparent;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background: var(--secondary);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.sidebar .tabs span:hover{
+    border-color: var(--green);
+    color: var(--green);
+    cursor: pointer;
+}
+
+.sidebar .tabs span.active{
+    border-color: var(--green);
+    color: var(--green);
+}
+
+/* ================= TAB CONTENT ================= */
+
+.tab-content{
+    display: none;
+}
+
+.tab-content p{
+    font-size: 1.1rem;
+    text-align: justify;
+    font-weight: 500;
+}
+.tab-content.active{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* ================= HEADINGS ================= */
+
+aside h2{
+    font-size: 2.5rem;
+}
+
+aside h2 span{
+    color: var(--green);
+}
+
+aside p{
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+/* ================= EXPERIENCE LIST ================= */
+
+.experience-list,.my-info,.education-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 650px;      /* SAME FEEL AS ORIGINAL */
+}
+
+/* ================= EXPERIENCE CARD ================= */
+
+.experience-box{
+    background: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.experience-box:hover,.skill-box:hover{
+    border-color: var(--green);
+    box-shadow: 5px 5px 5px var(--green),
+                -5px -5px 5px var(--green),
+                5px -5px 5px var(--green),
+                -5px 5px 5px var(--green);
+}
+.skill-list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 1rem;
+}
+
+.experience-list::-webkit-scrollbar,.education-list::-webkit-scrollbar,.skill-list::-webkit-scrollbar,.my-info::-webkit-scrollbar{
+    width: 5px;
+}
+
+.experience-list::-webkit-scrollbar-thumb,.education-list::-webkit-scrollbar-thumb,.skill-list::-webkit-scrollbar-thumb,.my-info::-webkit-scrollbar-thumb{
+    background: var(--green);
+    border-radius: 10px;
+}
+.experience-box h4{
+    font-size: 1.3rem;
+}
+
+.experience-box h3{
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
+.experience-box p{
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* ================= COMPANY NAME ================= */
+
+.company-name{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.company-name span{
+    width: 10px;
+    height: 10px;
+    background: var(--green);
+    border-radius: 50%;
+}
+
+.company-name p{
+    font-size: 1rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+.skill-list{
+        grid-template-columns: repeat(3,1fr);
+
+    }
+
+    /* ===== ABOUT ME INFO GRID ===== */
+
+.my-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   /* 👈 TWO COLUMNS */
+    gap: 2rem 3rem;
+    margin-top: 1.5rem;
+}
+
+/* each info item */
+.info-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 1.2rem;
+}
+
+/* label */
+.info-box span:first-child{
+    color: var(--green);
+    font-weight: 700;
+}
+
+/* value */
+.info-box span:last-child{
+    color: var(--white);
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #about.content.active{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    aside h2{
+        font-size: 2rem;
+    }
+
+    .experience-list{
+        max-width: 100%;
+    }
+    .skill-list{
+        grid-template-columns: repeat(3,1fr);
+
+    }
+    .my-info{
+       grid-template-columns: repeat(2,1fr);
+         font-size: 1.7rem;
+         gap: 2rem 1rem;
+    }
+}
+
+
+.skill-box{
+    height: 10rem;
+    display: flex;
+    flex-direction: column;   /* 👈 IMPORTANT */
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 10px;
+    border: 2px solid var(--disabled);
+    background: var(--disabled);
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+/* skill image */
+.skill-box img{
+    width: 4rem;
+    height: auto;
+}
+
+/* skill name text */
+.skill-name{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+}

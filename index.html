@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="shortcut icon" href="assets/my_logo.png">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- ===== Header ===== -->
+        <header>
+            <div class="brand-info">
+                <img src="assets/my_logo.png" alt="Logo">
+                <h1>Portfolio</h1>
+            </div>
+
+            <div class="menu-area">
+                <input type="checkbox" id="menu-toggle" hidden>
+
+                <label for="menu-toggle" class="menu-icon">
+                    <i class="ph ph-list"></i>
+                </label>
+
+                <label for="menu-toggle" class="menu-icon" id="overlay"></label>
+
+                <nav>
+                    <a href="#" style="--i:1" data-tab="home" class="nav-link active">Home</a>
+                    <a href="#" style="--i:2" data-tab="services" class="nav-link">Services</a>
+                    <a href="#" style="--i:3" data-tab="about" class="nav-link">About</a>
+                    <a href="#" style="--i:4" data-tab="projects" class="nav-link">Projects</a>
+                    <a href="#" style="--i:5" data-tab="contact" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ===== Home Section ===== -->
+        <section id="home" class="content active">
+            <div class="details">
+                <h2>Arjun C</h2>
+                <h3>I'm <span id="typing-span">Web Developer</span></h3>
+
+                <p>
+              I am a Web Developer focused on building clean, responsive, and user-friendly web applications.
+I enjoy working with modern web technologies and continuously improving my skills through real-world projects.
+                </p>
+
+              <div class="bottom">
+    <button class="btn">Download CV</button>
+
+   
+
+
+
+  <div class="social-icons">
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/arjun-c06/" target="_blank">
+    <i class="ph ph-linkedin-logo"></i>
+  </a>
+
+  <!-- GitHub -->
+  <a href="https://github.com/arjun06c" target="_blank">
+    <i class="ph ph-github-logo"></i>
+  </a>
+
+  <!-- Email -->
+  <a href="arjun06c@gmail.com">
+    <i class="ph ph-envelope"></i>
+  </a>
+
+  <!-- LeetCode -->
+  <a href="https://leetcode.com/u/arjun06c/" target="_blank">
+    <i class="ph ph-code"></i>
+  </a>
+
+</div>
+
+
+</div>
+
+            </div>
+
+            <div class="img-container">
+                <img src="assets/my_image.png" alt="Profile">
+            </div>
+        </section>
+
+        <!-- ===== Services Section ===== -->
+        <section id="services" class="content">
+            <h2>My <span>Services</span></h2>
+            <div class="service-list"></div>
+        </section>
+
+        <!-- ===== About Section ===== -->
+        <section id="about" class="content">
+
+            <div class="sidebar">
+                <h3>Why Hire Me?</h3>
+                <p>I’m a passionate and experienced MERN stack developer who simplifies complex concepts. I deliver quality mentorship, clear teaching, and reliable websites tailored to client needs with full dedication and care.</p>
+
+                <div class="tabs">
+                    <span data-section="education" class="tab">Education</span>
+                    <span data-section="experience" class="tab">Experience</span>
+                    <span data-section="skills" class="tab">Skills</span>
+                    <span data-section="about-me" class="tab">About</span>
+                </div>
+            </div>
+
+             <aside id="education" class="tab-content">
+                <h2>My <span>Education</span></h2>
+                <p>Here are my educational qualifications that have built a strong foundation in technology, problem-solving, and continuous learning in web development.</p>
+
+                <div class="education-list">
+                 
+                 
+                </div>
+            </aside>
+
+            <aside id="experience" class="tab-content active">
+                <h2>My <span>Experience</span></h2>
+                <p>Here are some of my professional experiences that showcase my journey, skills, and dedication in web development and collaboration.</p>
+
+
+                <div class="experience-list">
+                   
+                </div>
+            </aside>
+
+           
+
+            <aside id="skills" class="tab-content">
+                <h2>My <span>Skills</span></h2>
+                <p>Here are the key skills I’ve mastered through hands-on experience, enabling me to build high-quality, scalable, and responsive web applications.</p>
+                <div class="skill-list">
+                  
+                </div>
+            </aside>
+
+            <aside id="about-me" class="tab-content">
+                <h2>About <span>Me</span></h2>
+                <p> I'm a passionate developer dedicated to building impactful digital experiences, blending creativity and code to solve real-world problems efficiently and effectively.</p>
+                  <div class="my-info">
+
+                  </div>
+            </aside>
+
+        </section>
+
+        <!-- ===== Projects ===== -->
+        <section id="projects" class="content">
+            
+         <div class="projects">
+        
+             
+         </div>
+      
+
+        </section>
+
+        <!-- ===== Contact ===== -->
+        <section id="contact" class="content">
+          
+            <div class="contact-info">
+                <h2>Let's work <span>together</span></h2>
+                <p>Let’s work together to build meaningful and impactful digital experiences.
+Feel free to contact me for projects, collaborations, or opportunities..</p>
+                
+                <div class="contact-media">
+                 
+                </div>
+         
+
+            </div>
+                <form action="#">
+               <fieldset>
+                <!-- <legend>
+                    <span>Contact</span> Me !
+                </legend> -->
+                <div class="fields">
+                  <div>
+                    <label for="name">Name :</label>
+                    <input type="text" id="name" name="name" placeholder="Arjun" required>
+                  </div>
+                    <div>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" placeholder="arjun.c@.com" required>
+                </div>
+                   <div>
+                     <label for="phone"> Phone :</label>
+                     <input type="tel" id="phone" name="phone" placeholder="+91 9876543210">
+                   </div>  
+                   <div>
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
+                   </div>            
+                </div>
+                <button type="submit" class="btn" id="send-msg">Send Message</button>
+               </fieldset>
+                 
+                </form>
+
+        </section>
+
+    </div>
+
+    <script src="/scripts/script.js" type="module" defer></script>
+    <script src="/scripts/about.js" type="module" defer></script>
+    <script src="/scripts/projects.js" type="module" defer></script>
+    <script src="/scripts/contact.js" type="module" defer></script>
+
+</body>
+</html>
+
