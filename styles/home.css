@@ -156,6 +156,7 @@
 
 
 
+
 .social-icons a{
    text-decoration: none;
    color: var(--green);
@@ -178,4 +179,8 @@
     color: var(--primary);
     box-shadow: 2px 2px 2px var(--green), -2px -2px 2px var(--green), 2px -2px 2px var(--green), -2px 2px 2px var(--green);
     
+}
+.btn{
+    text-decoration: none;   /* 🔴 removes underline */
+    color: var(--primary);   /* or var(--white) if needed */
 }

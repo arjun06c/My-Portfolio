@@ -5,15 +5,15 @@ const contactList = [
     id: 1,
     icon: 'ph ph-phone-call',
     name: 'Phone',
-    value: '+123 456 7890',
-    href: 'tel:+1234567890'
+    value: '9080846805',
+    href: 'tel:9080846805'
   },
   {
     id: 2,
     icon: 'ph ph-envelope',
     name: 'Email',
     value: 'arjun.c@gmail.com',
-    href: 'mailto:arjun.c@gmail.com'
+    href: 'mailto:arjun06c@gmail.com'
   },
   {
     id: 3,
