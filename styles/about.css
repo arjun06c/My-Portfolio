@@ -4,86 +4,67 @@
     width: 100%;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;   /* LEFT / RIGHT like original */
+    grid-template-columns: 1fr 1.5fr;
     gap: 4rem;
-    align-items: start;
+    align-items: flex-start;
 }
 
-/* ================= SIDEBAR ================= */
+/* ================= LEFT SIDEBAR ================= */
 
 .sidebar{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    align-items: flex-start;   /* IMPORTANT */
 }
 
 .sidebar h3{
     font-size: 2rem;
-    text-align: left;
 }
 
 .sidebar p{
     font-size: 1.2rem;
     font-weight: 500;
-
-    text-align: justify;          /* justify */
-    text-justify: inter-word;     /* better spacing */
-    hyphens: auto;                /* 🔥 VERY IMPORTANT */
-    line-height: 1.2;             /* readability */
-
-    max-width: 520px;             /* 🔥 limits ugly stretching */
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 520px;
 }
-
 
 /* ================= TABS ================= */
 
-.sidebar .tabs {
-    width: 100%;
+.sidebar .tabs{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
 .sidebar .tabs span{
-    width: 100%;
-    border: 2px solid transparent;
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: 600;
     border-radius: 6px;
     background: var(--secondary);
-    transition: all 0.3s ease;
+    border: 2px solid transparent;
     text-align: center;
-}
-
-.sidebar .tabs span:hover{
-    border-color: var(--green);
-    color: var(--green);
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
+.sidebar .tabs span:hover,
 .sidebar .tabs span.active{
     border-color: var(--green);
     color: var(--green);
 }
 
-/* ================= TAB CONTENT ================= */
+/* ================= RIGHT CONTENT ================= */
 
 .tab-content{
     display: none;
 }
 
-.tab-content p{
-    font-size: 1.1rem;
-    text-align: justify;
-    font-weight: 500;
-}
 .tab-content.active{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 100%;
+    gap: 1.5rem;
 }
 
 /* ================= HEADINGS ================= */
@@ -98,57 +79,58 @@ aside h2 span{
 
 aside p{
     font-size: 1.1rem;
-    text-align: left;
+    line-height: 1.5;
 }
 
-/* ================= EXPERIENCE LIST ================= */
+/* ================= SCROLLABLE CONTENT BOX ================= */
 
-.experience-list,.my-info,.education-list{
+/* 🔥 Education, Experience & Skills ALL scroll here */
+.education-list,
+.experience-list,
+.skill-list{
+    max-height: 320px;           /* control height */
+    overflow-y: auto;            /* inner scroll */
+    padding-right: 0.5rem;
+
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 650px;      /* SAME FEEL AS ORIGINAL */
 }
 
-/* ================= EXPERIENCE CARD ================= */
+/* Skills grid */
+.skill-list{
+    grid-template-columns: repeat(3,1fr);
+}
+
+/* ================= CUSTOM SCROLLBAR ================= */
+
+.education-list::-webkit-scrollbar,
+.experience-list::-webkit-scrollbar,
+.skill-list::-webkit-scrollbar{
+    width: 6px;
+}
+
+.education-list::-webkit-scrollbar-thumb,
+.experience-list::-webkit-scrollbar-thumb,
+.skill-list::-webkit-scrollbar-thumb{
+    background: var(--green);
+    border-radius: 10px;
+}
+
+/* ================= EXPERIENCE / EDUCATION CARD ================= */
 
 .experience-box{
     background: var(--secondary);
     padding: 1.5rem;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+    border: 2px solid var(--disabled);
+    transition: 0.3s ease;
 }
 
-.experience-box:hover,.skill-box:hover{
+.experience-box:hover{
     border-color: var(--green);
-    box-shadow: 5px 5px 5px var(--green),
-                -5px -5px 5px var(--green),
-                5px -5px 5px var(--green),
-                -5px 5px 5px var(--green);
-}
-.skill-list{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
-    overflow-y: auto;
-    max-height: 300px;
-    padding: 1rem;
-}
-
-.experience-list::-webkit-scrollbar,.education-list::-webkit-scrollbar,.skill-list::-webkit-scrollbar,.my-info::-webkit-scrollbar{
-    width: 5px;
-}
-
-.experience-list::-webkit-scrollbar-thumb,.education-list::-webkit-scrollbar-thumb,.skill-list::-webkit-scrollbar-thumb,.my-info::-webkit-scrollbar-thumb{
-    background: var(--green);
-    border-radius: 10px;
-}
-.experience-box h4{
-    font-size: 1.3rem;
+    box-shadow: 0 0 6px rgba(124, 240, 61, 0.3);
+    transform: translateY(-2px);
 }
 
 .experience-box h3{
@@ -156,117 +138,98 @@ aside p{
     color: var(--green);
 }
 
+.experience-box h4{
+    font-size: 1.3rem;
+}
+
 .experience-box p{
     font-size: 1rem;
-    text-align: left;
+    line-height: 1.4;
 }
 
-/* ================= COMPANY NAME ================= */
+/* ================= SKILL BOX ================= */
 
-.company-name{
+.skill-box{
+    height: 10rem;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
+
+    background: var(--secondary);
+    border-radius: 10px;
+    border: 2px solid var(--disabled);
+    transition: 0.3s ease;
 }
 
-.company-name span{
-    width: 10px;
-    height: 10px;
-    background: var(--green);
-    border-radius: 50%;
+.skill-box:hover{
+    border-color: var(--green);
+    box-shadow: 0 0 6px rgba(124, 240, 61, 0.3);
 }
 
-.company-name p{
-    font-size: 1rem;
+.skill-box img{
+    width: 4rem;
 }
 
-/* ================= RESPONSIVE ================= */
+.skill-name{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
 
-.skill-list{
-        grid-template-columns: repeat(3,1fr);
-
-    }
-
-    /* ===== ABOUT ME INFO GRID ===== */
+/* ================= ABOUT INFO ================= */
 
 .my-info{
+    max-height: 320px;
+    overflow-y: auto;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);   /* 👈 TWO COLUMNS */
+    grid-template-columns: repeat(2,1fr);
     gap: 2rem 3rem;
-    margin-top: 1.5rem;
 }
 
-/* each info item */
+.my-info::-webkit-scrollbar{
+    width: 6px;
+}
+
+.my-info::-webkit-scrollbar-thumb{
+    background: var(--green);
+    border-radius: 10px;
+}
+
 .info-box{
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
-/* label */
 .info-box span:first-child{
     color: var(--green);
     font-weight: 700;
 }
 
-/* value */
-.info-box span:last-child{
-    color: var(--white);
-    font-weight: 500;
-}
+/* ================= RESPONSIVE ================= */
 
-
-@media screen and (max-width: 768px) {
+@media (max-width: 768px){
 
     #about.content.active{
         grid-template-columns: 1fr;
-        gap: 3rem;
     }
 
-    aside h2{
-        font-size: 2rem;
-    }
-
-    .experience-list{
-        max-width: 100%;
-    }
-    .skill-list{
-        grid-template-columns: repeat(3,1fr);
-
-    }
+    .education-list,
+    .experience-list,
+    .skill-list,
     .my-info{
-       grid-template-columns: repeat(2,1fr);
-         font-size: 1.7rem;
-         gap: 2rem 1rem;
+        max-height: none;
+        overflow: visible;
     }
-}
 
+    .skill-list{
+        grid-template-columns: repeat(2,1fr);
+    }
 
-.skill-box{
-    height: 10rem;
-    display: flex;
-    flex-direction: column;   /* 👈 IMPORTANT */
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    border-radius: 10px;
-    border: 2px solid var(--disabled);
-    background: var(--disabled);
-    cursor: pointer;
-    transition: all linear 0.3s;
-}
-
-/* skill image */
-.skill-box img{
-    width: 4rem;
-    height: auto;
-}
-
-/* skill name text */
-.skill-name{
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--white);
-    text-align: center;
+    .my-info{
+        grid-template-columns: 1fr;
+    }
 }

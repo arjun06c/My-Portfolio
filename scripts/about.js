@@ -122,7 +122,13 @@ else if (activeTab === "skills") {
     { id: 3, name: "JavaScript", icon: "assets/skills/js.png" },
     { id: 4, name: "React", icon: "assets/skills/react.png" },
     { id: 5, name: "MongoDB", icon: "assets/skills/mongodb.png" },
-    { id: 6, name: "Node.js", icon: "assets/skills/node.png" }
+    { id: 6, name: "Node.js", icon: "assets/skills/node.png" },
+        { id: 7, name: "Java", icon: "assets/skills/java.png" },
+         { id: 8, name: "MySQL", icon: "assets/skills/Sql.webp" },
+          { id: 9, name: "TailWind CSS", icon: "assets/skills/tailwind.png" },
+           { id: 10, name: "Express js", icon: "assets/skills/Express.webp" },
+            { id: 11, name: "C program", icon: "assets/skills/c.webp" }
+
   ];
 
   if (skills) {

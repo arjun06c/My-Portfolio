@@ -6,7 +6,7 @@
     <title>Portfolio</title>
 
     <link rel="shortcut icon" href="assets/my_logo.png">
-    <link rel="stylesheet" href="styles/services.css">
+    <!-- <link rel="stylesheet" href="styles/services.css"> -->
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/about.css">
@@ -36,79 +36,67 @@
 
                 <nav>
                     <a href="#" style="--i:1" data-tab="home" class="nav-link active">Home</a>
-                    <a href="#" style="--i:2" data-tab="services" class="nav-link">Services</a>
+                    <!-- <a href="#" style="--i:2" data-tab="services" class="nav-link">Services</a> -->
                     <a href="#" style="--i:3" data-tab="about" class="nav-link">About</a>
                     <a href="#" style="--i:4" data-tab="projects" class="nav-link">Projects</a>
                     <a href="#" style="--i:5" data-tab="contact" class="nav-link">Contact</a>
                 </nav>
             </div>
         </header>
+<!-- ===== HOME SECTION ===== -->
+<section id="home" class="content home active">
 
-        <!-- ===== Home Section ===== -->
-        <section id="home" class="content active">
-            <div class="details">
-                <h2>Arjun C</h2>
-                <h3>I'm <span id="typing-span">Web Developer</span></h3>
+  <div class="home-container">
 
-                <p>
-              I am a Web Developer focused on building clean, responsive, and user-friendly web applications.
-I enjoy working with modern web technologies and continuously improving my skills through real-world projects.
-                </p>
+    <!-- LEFT CONTENT -->
+    <div class="home-text">
+      <h1>Arjun C</h1>
+      <h2>I’m a <span>MERN Stack Developer</span></h2>
 
-              <div class="bottom">
-<a href="assets/Arjun_CV.pdf" download class="btn">
-  Download CV
-</a>
+      <p>
+I am a MERN Stack Developer focused on building scalable, responsive, and user-friendly web applications using MongoDB, Express.js, React, and Node.js. I continuously improve my skills through real-world projects.      </p>
 
-   
+      <div class="home-actions">
+        <a href="assets/Arjun_CV.pdf" download class="btn-cv">Download CV</a>
 
+        <div class="home-icons">
+          <a href="https://www.linkedin.com/in/arjun-c06/" target="_blank">
+            <i class="ph ph-linkedin-logo"></i>
+          </a>
+          <a href="https://github.com/arjun06c" target="_blank">
+            <i class="ph ph-github-logo"></i>
+          </a>
+          <a href="mailto:arjun06c@gmail.com">
+            <i class="ph ph-envelope"></i>
+          </a>
+          <a href="https://leetcode.com/u/arjun06c/" target="_blank">
+            <i class="ph ph-code"></i>
+          </a>
+        </div>
+      </div>
+    </div>
 
+    <!-- RIGHT IMAGE -->
+    <div class="home-image">
+      <div class="image-ring">
+        <img src="assets/my_image.png" alt="Profile">
+      </div>
+    </div>
 
-  <div class="social-icons">
-
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/arjun-c06/" target="_blank">
-    <i class="ph ph-linkedin-logo"></i>
-  </a>
-
-  <!-- GitHub -->
-  <a href="https://github.com/arjun06c" target="_blank">
-    <i class="ph ph-github-logo"></i>
-  </a>
-
-  <!-- Email -->
-  <a href="arjun06c@gmail.com">
-    <i class="ph ph-envelope"></i>
-  </a>
-
-  <!-- LeetCode -->
-  <a href="https://leetcode.com/u/arjun06c/" target="_blank">
-    <i class="ph ph-code"></i>
-  </a>
-
-</div>
-
-
-</div>
-
-            </div>
-
-            <div class="img-container">
-                <img src="assets/my_image.png" alt="Profile">
-            </div>
-        </section>
+  </div>
+</section>
 
         <!-- ===== Services Section ===== -->
-        <section id="services" class="content">
+        <!-- <section id="services" class="content">
             <h2>My <span>Services</span></h2>
             <div class="service-list"></div>
-        </section>
+        </section> -->
 
         <!-- ===== About Section ===== -->
         <section id="about" class="content">
 
             <div class="sidebar">
-                <h3>Why Hire Me?</h3>
+                <h3>Profile Summary</h3>
                 <p>I’m a passionate and experienced MERN stack developer who simplifies complex concepts. I deliver quality mentorship, clear teaching, and reliable websites tailored to client needs with full dedication and care.</p>
 
                 <div class="tabs">
@@ -170,49 +158,81 @@ I enjoy working with modern web technologies and continuously improving my skill
 
         </section>
 
-        <!-- ===== Contact ===== -->
-        <section id="contact" class="content">
-          
-            <div class="contact-info">
-                <h2>Let's work <span>together</span></h2>
-                <p>Let’s work together to build meaningful and impactful digital experiences.
-Feel free to contact me for projects, collaborations, or opportunities..</p>
-                
-                <div class="contact-media">
-                 
-                </div>
-         
+    
+        <!-- ===== Contact Section ===== -->
+<section id="contact" class="content">
 
-            </div>
-                <form action="#">
-               <fieldset>
-                <!-- <legend>
-                    <span>Contact</span> Me !
-                </legend> -->
-                <div class="fields">
-                  <div>
-                    <label for="name">Name :</label>
-                    <input type="text" id="name" name="name" placeholder="Arjun" required>
-                  </div>
-                    <div>
-                        <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" placeholder="arjun.c@.com" required>
-                </div>
-                   <div>
-                     <label for="phone"> Phone :</label>
-                     <input type="tel" id="phone" name="phone" placeholder="+91 9876543210">
-                   </div>  
-                   <div>
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
-                   </div>            
-                </div>
-                <button type="submit" class="btn" id="send-msg">Send Message</button>
-               </fieldset>
-                 
-                </form>
+  <div class="contact-wrapper">
 
-        </section>
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-subtitle">Let’s Work Together</p>
+
+    <div class="contact-card">
+
+      <!-- LEFT -->
+      <div class="contact-left">
+
+        <div class="profile">
+          <img src="assets/my_image.png" alt="Profile">
+          <div>
+            <h3>Arjun C</h3>
+            <p>MERN Stack Developer</p>
+          </div>
+        </div>
+
+        <div class="info-list">
+
+          <div class="info-item">
+            <i class="ph ph-phone"></i>
+            <span>+91 9080846805</span>
+          </div>
+
+          <div class="info-item">
+            <i class="ph ph-envelope"></i>
+            <span>arjun06c@gmail.com</span>
+          </div>
+
+          <div class="info-item">
+            <i class="ph ph-map-pin"></i>
+            <span>Madurai, Tamil Nadu, India</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="divider"></div>
+
+      <!-- RIGHT -->
+      <div class="contact-right">
+
+        <a href="https://www.linkedin.com/in/arjun-c06/" target="_blank">
+          <i class="ph ph-linkedin-logo"></i>
+          <span>Arjun C</span>
+        </a>
+
+        <a href="https://github.com/arjun06c" target="_blank">
+          <i class="ph ph-github-logo"></i>
+          <span>arjun06c</span>
+        </a>
+
+        <a href="https://leetcode.com/u/arjun06c/" target="_blank">
+          <i class="ph ph-code"></i>
+          <span>LeetCode</span>
+        </a>
+
+      </div>
+
+    </div>
+
+    <p class="copyright">
+      © Copyrights ArjunC 2026
+    </p>
+
+  </div>
+
+</section>
+
 
     </div>
 

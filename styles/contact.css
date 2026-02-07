@@ -1,235 +1,190 @@
 /* ================= CONTACT SECTION ================= */
 
 #contact.content.active{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    display: flex;
+    justify-content: center;        /* horizontal center */
+    align-items: flex-start;        /* 🔥 move content UP */
+    padding: 3rem 1rem;             /* space from top */
+}
 
-    max-width: 1100px;          /* 🔥 MEDIUM WIDTH */
-    margin: 2rem auto;
+/* ================= WRAPPER ================= */
+
+.contact-wrapper{
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* ================= TITLE ================= */
+
+.contact-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.contact-subtitle{
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+}
+
+/* ================= GLASS CARD ================= */
+
+.contact-card{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
     padding: 2.5rem;
 
-    background: radial-gradient(circle at top, #0b1220, #020617);
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
     border-radius: 20px;
-
-    align-items: stretch;       /* SAME HEIGHT */
+    border: 4px solid rgba(255,255,255,0.12);
 }
 
-/* ================= LEFT & RIGHT ================= */
+/* ================= LEFT ================= */
 
-.contact-info,
-form{
-    height: 100%;
+.contact-left{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-/* ================= LEFT SIDE ================= */
-
-.contact-info{
     gap: 2rem;
+    text-align: left;
 }
 
-.contact-info h2{
-    font-size: 2.5rem;
-    line-height: 1.2;
-}
+/* PROFILE */
 
-.contact-info h2 span{
-    color: var(--green);
-}
-
-.contact-info p{
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* ================= CONTACT MEDIA ================= */
-
-.contact-media{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-/* MEDIA CARD */
-
-.media{
+.profile{
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    background: #2f343c;
-    padding: 1rem;
-    border-radius: 12px;
-
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
-.media:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+.profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* ICON */
-
-.media span{
-    background: #1f2937;
-    padding: 0.8rem;
-    border-radius: 10px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.profile h3{
+    font-size: 1.4rem;
 }
 
-.media i{
-    font-size: 2.2rem;
-    color: var(--green);
+.profile p{
+    opacity: 0.7;
+    font-size: 1rem;
 }
 
-/* TEXT */
+/* ================= INFO LIST ================= */
 
-.contact-value{
+.info-list{
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-}
-
-.contact-value p{
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--green);
-}
-
-.contact-value a{
-    font-size: 1.2rem;
-    color: var(--white);
-    text-decoration: none;
-    opacity: 0.85;
-}
-
-.contact-value a:hover{
-    opacity: 1;
-    text-decoration: underline;
-}
-
-/* ================= RIGHT FORM ================= */
-
-form{
-    background: #3a3f47;
-    padding: 2rem;           /* 🔥 REDUCED */
-    border-radius: 20px;
-}
-
-/* FORM TITLE */
-
-legend{
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-legend span{
-    color: var(--green);
-}
-
-fieldset{
-    border: none;
-    padding: 0;
-}
-
-/* ================= FORM FIELDS ================= */
-
-.fields{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
 }
 
-.fields div{
+.info-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.info-item i{
+    font-size: 1.4rem;
+    color: var(--green);
+}
+
+/* ================= DIVIDER ================= */
+
+.divider{
+    width: 1px;
+    background: rgba(255,255,255,0.2);
+}
+
+/* ================= RIGHT ================= */
+
+.contact-right{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.5rem;
+    text-align: left;
 }
 
-.fields div:last-child{
-    grid-column: span 2;
-}
-
-label{
-    font-size: 1.2rem;
-}
-
-/* INPUTS */
-
-input,
-textarea{
-    background: #4a4f57;
-    border: none;
-    outline: none;
-
-    font-size: 1.2rem;
-    padding: 0.75rem;
-    border-radius: 8px;
-
+.contact-right a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
     color: var(--white);
+    font-size: 1.1rem;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
 }
 
-input::placeholder,
-textarea::placeholder{
+.contact-right a i{
+    font-size: 1.6rem;
+    color: var(--green);
+}
+
+.contact-right a:hover{
+    opacity: 1;
+}
+
+/* ================= FOOTER ================= */
+
+.copyright{
+    margin-top: 2rem;
     opacity: 0.6;
-}
-
-/* ================= BUTTON ================= */
-
-#send-msg{
-    margin: 2rem auto 0;
-    padding: 0.7rem 2.2rem;
-
-    font-size: 1.2rem;
-    font-weight: 600;
-
-    border-radius: 25px;
-    background: var(--green);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#send-msg:hover{
-    background: transparent;
-    color: var(--white);
-    border: 2px solid var(--green);
-    box-shadow: 0 0 10px var(--green);
+    font-size: 0.9rem;
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media screen and (max-width: 768px){
+/* TABLET */
+
+@media (max-width: 900px){
 
     #contact.content.active{
+        padding: 2.5rem 1rem;
+    }
+
+    .contact-card{
         grid-template-columns: 1fr;
-        padding: 2rem;
+        text-align: center;
     }
 
-    .fields{
-        grid-template-columns: 1fr;
+    .divider{
+        display: none;
     }
 
-    .fields div:last-child{
-        grid-column: span 1;
+    .contact-left,
+    .contact-right{
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px){
+
+    .contact-title{
+        font-size: 2rem;
     }
 
-    legend{
-        font-size: 2.2rem;
+    .contact-subtitle{
+        font-size: 1rem;
     }
 
-    .contact-info h2{
-        font-size: 2.2rem;
+    .contact-card{
+        padding: 1.5rem;
+    }
+
+    .info-item,
+    .contact-right a{
+        font-size: 1rem;
     }
 }
