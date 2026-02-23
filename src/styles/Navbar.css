@@ -1,0 +1,179 @@
+/* Global Helper for Navbar Scroll Guard */
+.no-scroll {
+    overflow: hidden !important;
+}
+
+.navbar-header {
+    width: 100%;
+    position: fixed;
+    /* Header should stay fixed at the top for professional UI */
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /* Absolute highest priority */
+    background: transparent;
+    transition: var(--transition-smooth);
+}
+
+.navbar-header.scrolled {
+    background: rgba(5, 10, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-info {
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    z-index: 5001;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+}
+
+.brand-logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+}
+
+.brand-text h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
+.brand-text p {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin: 0;
+}
+
+/* Desktop Links Styling */
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+    transition: var(--transition-smooth);
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: var(--transition-smooth);
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+/* Sidebar Menu Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 10px;
+    z-index: 5002;
+    /* Highest priority */
+    transition: var(--transition-smooth);
+}
+
+.menu-toggle:hover {
+    color: var(--accent);
+}
+
+/* Professional Overlay Background */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 9000;
+    /* Behind actual sidebar but ahead of page */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Sidebar Configuration */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(300px, 85%);
+        height: 100vh;
+        background: #0a1120;
+        border-left: 1px solid var(--glass-border);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        z-index: 9500;
+        /* Sidebar priority */
+
+        /* Slide Logic: transform is smoother than 'right' */
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -15px 0 35px rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+}

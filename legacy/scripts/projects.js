@@ -2,7 +2,19 @@ const projectList = [
   {
     id: 1,
     number: "01",
-    title: "Bike rental app",
+    title: "Faculty Workload Optimization System",
+    details: `A smart web application that automatically balances faculty workload.
+It assigns subjects based on availability, department, and total assigned hours.
+The system prevents schedule clashes and ensures fair workload distribution.`,
+    techStack: ["React", "Node.js", "Express", "MongoDB"],
+    image: "assets/faculty.png",  // Make sure this image exists
+    liveLink: "#",
+    githubLink: "#"
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "Bike Rental App",
     details: `An online platform that allows users to browse and rent bikes easily.
 It helps bike owners earn money by renting out their unused bikes.`,
     techStack: ["React", "Node.js", "MongoDB"],
@@ -11,9 +23,9 @@ It helps bike owners earn money by renting out their unused bikes.`,
     githubLink: "#"
   },
   {
-    id: 2,
-    number: "02",
-    title: "E-commerce website",
+    id: 3,
+    number: "03",
+    title: "E-commerce Website",
     details: `An online shopping website where users can browse products and place orders.
 Designed with a clean and responsive interface for a smooth user experience.`,
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -28,6 +40,7 @@ let currentIndex = 0;
 
 const renderProject = (index) => {
   const projectContent = projectList[index];
+
   const previousDisabled = currentIndex === 0;
   const nextDisabled = currentIndex === projectList.length - 1;
 
@@ -46,17 +59,19 @@ const renderProject = (index) => {
       <hr/>
 
       <div class="links">
-        <a href="${projectContent.liveLink}">
+        <a href="${projectContent.liveLink}" target="_blank">
           <i class="ph ph-arrow-right"></i>
         </a>
-        <a href="${projectContent.githubLink}">
+        <a href="${projectContent.githubLink}" target="_blank">
           <i class="ph ph-github-logo"></i>
         </a>
       </div>
     </div>
 
     <div class="carousel">
-      <img src="${projectContent.image}" alt="${projectContent.title}" />
+      <div class="carousel-img-container">
+        <img src="${projectContent.image}" alt="${projectContent.title}" />
+      </div>
 
       <div class="arrows">
         <a href="#" id="previous" class="${previousDisabled ? "disabled-btn" : ""}">

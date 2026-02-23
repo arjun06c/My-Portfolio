@@ -1,0 +1,217 @@
+/* ================= CONTACT SECTION ================= */
+
+#contact.content.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    min-height: calc(100vh - 150px);
+}
+
+/* ================= WRAPPER ================= */
+
+.contact-wrapper {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease;
+}
+
+/* ================= TITLE ================= */
+
+.contact-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+/* ================= GLASS CARD ================= */
+
+.contact-card {
+    display: grid;
+    grid-template-columns: 1.1fr auto 0.9fr;
+    gap: 3rem;
+    padding: 3.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    text-align: left;
+}
+
+/* ================= LEFT ================= */
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* PROFILE */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.profile img {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid var(--glass-border);
+}
+
+.profile h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+}
+
+.profile p {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ================= INFO LIST ================= */
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.05rem;
+    color: var(--text-dim);
+    transition: var(--transition-smooth);
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 210, 255, 0.1);
+    border-radius: 10px;
+}
+
+.info-item:hover {
+    color: white;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider {
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--glass-border), transparent);
+}
+
+/* ================= RIGHT ================= */
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-right a {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    transition: var(--transition-smooth);
+}
+
+.contact-right a i {
+    font-size: 1.6rem;
+    color: var(--accent);
+}
+
+.contact-right a:hover {
+    background: rgba(0, 210, 255, 0.1);
+    border-color: var(--accent);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* ================= FOOTER ================= */
+
+.copyright {
+    margin-top: 4rem;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .contact-card {
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .divider {
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(to right, transparent, var(--glass-border), transparent);
+    }
+
+    .contact-left,
+    .contact-right {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
+
+    .contact-right a {
+        width: 100%;
+        justify-content: center;
+    }
+}

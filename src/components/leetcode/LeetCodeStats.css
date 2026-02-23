@@ -1,0 +1,224 @@
+/* Senior Dev Styling: LeetCode Dashboard Integration */
+
+.leetcode-main-container {
+    width: 100%;
+}
+
+.leetcode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    align-items: center;
+    border-radius: 24px;
+}
+
+/* Visuals - Circular Stats */
+.circular-stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.circle-wrapper {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-ring-v2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.ring-bg-v2 {
+    fill: none;
+    stroke: var(--glass-border);
+    stroke-width: 5;
+}
+
+.ring-segment-v2 {
+    fill: none;
+    stroke-width: 7;
+    stroke-linecap: round;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ring-segment-v2.easy {
+    stroke: #00b8a3;
+}
+
+.ring-segment-v2.medium {
+    stroke: #ffc01e;
+}
+
+.ring-segment-v2.hard {
+    stroke: #ef4743;
+}
+
+.inner-text {
+    z-index: 2;
+    text-align: center;
+}
+
+.solved-headline {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+}
+
+.solved-headline .current {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.solved-headline .total {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+}
+
+.label-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-top: -5px;
+}
+
+.stats-footer-text {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+}
+
+/* Details - Difficulty Rows */
+.leetcode-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.diff-row-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    transition: var(--transition-smooth);
+}
+
+.diff-row-card:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.row-label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.diff-row-card.teal .row-label {
+    color: #00b8a3;
+}
+
+.diff-row-card.yellow .row-label {
+    color: #ffc01e;
+}
+
+.diff-row-card.red .row-label {
+    color: #ef4743;
+}
+
+.row-numbers {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.solved-val {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.total-val {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+/* Action Button */
+.external-profile-btn {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: var(--accent);
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 14px;
+    transition: var(--transition-smooth);
+}
+
+.external-profile-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.4);
+}
+
+/* Loading & Warnings */
+.leetcode-card-skeleton {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    color: var(--text-dim);
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--glass-border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.api-warning-tag {
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: rgba(0, 210, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+    width: fit-content;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 850px) {
+    .leetcode-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
