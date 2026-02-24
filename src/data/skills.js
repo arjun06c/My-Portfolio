@@ -1,44 +1,40 @@
 export const skillsData = [
     {
-        category: "Frontend Development",
+        category: "Frontend",
         skills: [
-            { name: "HTML", icon: "/assets/skills/html.png" },
-            { name: "CSS", icon: "/assets/skills/css.png" },
-            { name: "JavaScript", icon: "/assets/skills/js.png" },
-            { name: "React", icon: "/assets/skills/react.png" },
-            { name: "Tailwind CSS", icon: "/assets/skills/Tailwind.png" },
-            { name: "Vite", icon: "https://vitejs.dev/logo.svg" }
+            { name: "React", details: "Hooks, Router, Component Architecture", icon: "/assets/skills/react.png" },
+            { name: "JavaScript", details: "ES6+, Async/Await, DOM Manipulation", icon: "/assets/skills/js.png" },
+            { name: "Tailwind CSS", details: "Responsive UI, Custom Themes, Utilities", icon: "/assets/skills/Tailwind.png" },
+            { name: "HTML/CSS", details: "Semantic HTML, Flexbox, Grid, Animations", icon: "/assets/skills/html.png" }
         ]
     },
     {
-        category: "Backend Development",
+        category: "Backend",
         skills: [
-            { name: "Node.js", icon: "/assets/skills/node.png" },
-            { name: "Express.js", icon: "/assets/skills/Express.webp" }
+            { name: "Node.js", details: "REST API, Middleware, File System", icon: "/assets/skills/node.png" },
+            { name: "Express", details: "Routing, Authentication, Controllers", icon: "/assets/skills/Express.webp" }
         ]
     },
     {
         category: "Database",
         skills: [
-            { name: "MongoDB", icon: "/assets/skills/mongodb.png" },
-            { name: "MySQL", icon: "/assets/skills/Sql.webp" }
+            { name: "MongoDB", details: "Schema Design, Aggregation Pipeliens", icon: "/assets/skills/mongodb.png" },
+            { name: "MySQL", details: "Relational Design, SQL Queries", icon: "/assets/skills/Sql.webp" }
         ]
     },
     {
-        category: "Programming Languages",
+        category: "Languages",
         skills: [
-            { name: "Java", icon: "/assets/skills/Java.png" },
-            { name: "C", icon: "/assets/skills/c.webp" }
+            { name: "Java", details: "OOPs, Collections, Exception Handling", icon: "/assets/skills/Java.png" },
+            { name: "C Language", details: "Pointers, Memory Management, Data Structures", icon: "/assets/skills/c.webp" }
         ]
     },
     {
-        category: "Tools & Technologies",
+        category: "Tools",
         skills: [
-            { name: "Git", icon: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" },
-            { name: "GitHub", icon: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" },
-            { name: "Postman", icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
-            { name: "VS Code", icon: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" },
-            { name: "npm", icon: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" }
+            { name: "Git & GitHub", details: "Version Control, Branching, PRs", icon: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" },
+            { name: "Postman", details: "API Testing, Documentation", icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+            { name: "VS Code", details: "Extensions, Debugging", icon: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" }
         ]
     }
 ];

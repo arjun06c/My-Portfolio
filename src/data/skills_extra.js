@@ -5,11 +5,11 @@ export const codingPlatforms = [
         icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png",
         username: "arjun06c",
         stats: {
-            total: 350, // Static fallback
+            total: 192, // Static fallback
             easy: 150,
-            medium: 150,
-            hard: 50,
-            totalQuestions: 3200
+            medium: 41,
+            hard: 1,
+            totalQuestions: 3850
         }
     }
 ];
@@ -17,16 +17,16 @@ export const codingPlatforms = [
 export const certificatesData = [
     {
         id: 1,
-        title: "Full Stack Web Development",
-        platform: "Coursera",
-        year: "2024",
+        title: "Javascript essentials",
+        platform: "Cisco Networking Academy",
+        year: "2026",
         link: "#"
     },
     {
         id: 2,
-        title: "React & Redux Masterclass",
-        platform: "Udemy",
-        year: "2023",
+        title: "Operating System Fundamentals",
+        platform: "cisco Networking Academy",
+        year: "2026",
         link: "#"
     },
     {
