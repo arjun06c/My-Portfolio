@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { skillsData } from '../data/skills';
-import { certificatesData } from '../data/skills_extra';
 import LeetCodeScore from '../components/leetcode/LeetCodeScore';
-import Certificates from '../components/Certificates';
 import PageWrapper from '../components/PageWrapper';
 import { fadeUp, staggerContainer, viewportConfig } from '../animations/variants';
 
@@ -90,15 +88,6 @@ const Skills = () => {
                             </div>
                         </motion.div>
 
-                        <motion.div
-                            variants={fadeUp}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={viewportConfig}
-                        >
-                            <h3 className="text-white font-bold mb-8 text-xl">Certifications</h3>
-                            <Certificates certificates={certificatesData} />
-                        </motion.div>
                     </div>
                 </div>
             </div>

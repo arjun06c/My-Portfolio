@@ -17,7 +17,7 @@ export const codingPlatforms = [
 export const certificatesData = [
     {
         id: 1,
-        title: "Javascript essentials",
+        title: "JavaScript Essentials",
         platform: "Cisco Networking Academy",
         year: "2026",
         link: "#"
@@ -25,7 +25,7 @@ export const certificatesData = [
     {
         id: 2,
         title: "Operating System Fundamentals",
-        platform: "cisco Networking Academy",
+        platform: "Cisco",
         year: "2026",
         link: "#"
     },

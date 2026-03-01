@@ -8,6 +8,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
+import Achievements from './pages/Achievements';
 import Footer from './components/Footer';
 
 // Minimal App for debugging
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/achievements" element={<Achievements />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>
